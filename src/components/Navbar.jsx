@@ -1,6 +1,8 @@
 
+
 import { Link, useLocation } from "react-router-dom";
 import { HiHome, HiOutlineHome, HiUserGroup, HiOutlineUserGroup, HiLightBulb, HiOutlineLightBulb, HiSearch, HiOutlineSearch, HiMenu, HiOutlineMenu } from "react-icons/hi";
+import radiantLogo from "../assets/radinatpath.png";
 
 const navLinks = [
   { to: "/", label: "Home", icon: HiOutlineHome, iconActive: HiHome },
@@ -18,6 +20,7 @@ export default function Navbar() {
       <nav className="hidden md:block w-full bg-white border-b border-slate-100 shadow-sm fixed top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 font-extrabold text-blue-700 text-xl">
+            <img src={radiantLogo} alt="RadiantPath Logo" className="h-8 w-8 object-contain" />
             <span>RadiantPath</span>
           </Link>
           <div className="flex gap-6">

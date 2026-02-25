@@ -75,7 +75,7 @@ export function AboutPage({ setPage }) {
               From biometric devices tightly integrated with our HRMS software to CCTV systems linked with visitor management — hardware and software that communicate perfectly, because they were designed together.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
-              {["Biometric Devices", "CCTV Systems", "Access Control", "Networking", "Server Setup", "Hardware AMC"].map((s) => (
+              {["Biometric Devices", "CCTV Systems", "Access Control",  "Server Setup", "Hardware AMC"].map((s) => (
                 <div key={s} style={{ display: "flex", alignItems: "center", gap: 8, color: "#374151", fontSize: "0.88rem", fontWeight: 500 }}>
                   <span style={{ width: 8, height: 8, borderRadius: "50%", background: "linear-gradient(135deg,#0ea5e9,#06b6d4)", flexShrink: 0 }} />
                   {s}
@@ -83,6 +83,44 @@ export function AboutPage({ setPage }) {
               ))}
             </div>
           </div>
+        </div>
+      </Section>
+
+
+      {/* Dealership / Authorized Partnership */}
+      <Section style={{ background: "#fff" }}>
+        <SectionHead tag="Dealership / Authorized Partnership" title="Trusted by Leading Global Brands" sub="Shree Nithya Enterprises is an Authorized Distributor & Partner for the following brands:" />
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 32, margin: "36px 0 0 0" }}>
+          {/* Brand Cards */}
+          {[
+            { name: "ZKTeco", icon: "🔒", color: "#1d6af5" },
+            { name: "eSSL", icon: "🔑", color: "#6366f1" },
+            { name: "Paywell", icon: "💳", color: "#0891b2" },
+            { name: "Hikvision", icon: "📷", color: "#ef4444" },
+            { name: "Mantra", icon: "🖐️", color: "#16a34a" },
+          ].map((b, i) => (
+            <div key={b.name} style={{
+              background: "linear-gradient(135deg,#f8fafc,#e0e7ef 80%)",
+              borderRadius: 14,
+              boxShadow: "0 2px 12px rgba(99,102,241,0.07)",
+              padding: "28px 32px",
+              minWidth: 160,
+              maxWidth: 220,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              border: `2.5px solid ${b.color}`,
+              transition: "transform 0.18s, box-shadow 0.18s",
+              cursor: "pointer",
+            }}
+            className="brand-card anim-fade-up"
+            >
+              <div style={{ fontSize: 38, color: b.color, marginBottom: 8 }}>{b.icon}</div>
+              <div style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 800, fontSize: "1.18rem", color: b.color, letterSpacing: "0.04em", textAlign: "center" }}>{b.name}</div>
+            </div>
+          ))}
         </div>
       </Section>
 

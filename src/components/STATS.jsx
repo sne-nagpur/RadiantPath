@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Counter } from "./Counter";
 export const STATS = [
-  { value: 150, suffix: "+", label: "Clients Served" },
-  { value: 12, suffix: "+", label: "Years Experience" },
-  { value: 30, suffix: "+", label: "Products Deployed" },
+  { value: 1000, suffix: "+", label: "Clients Served" },
+  { value: 15, suffix: "+", label: "Years Experience" },
+  { value: 450, suffix: "+", label: "Products Deployed" },
   { value: 99, suffix: "%", label: "Uptime SLA" },
 ];
 

@@ -4,6 +4,8 @@ import { SOLUTIONS } from "../components/SOLUTIONS";
 
 import { StatsBar } from "../components/STATS";
 import { FEATURES } from "../components/FEATURES";
+import SoftwareSlider from "../components/SoftwareSlider";
+
 export function HomePage({ setPage }) {
   return (
     <div>
@@ -27,7 +29,11 @@ export function HomePage({ setPage }) {
       {/* Solutions Preview */}
       <Section style={{ background: "#f8fafc" }} className="grid-bg">
         <SectionHead tag="Our Core Solutions" title="Technology That Works For You" sub="Six flagship products designed to automate, integrate, and accelerate your business operations." />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 28 }}>
+        {/* Software Products Slider INSIDE the Solutions section */}
+        <div style={{ margin: "32px 0" }}>
+          <SoftwareSlider />
+        </div>
+        {/* <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 28 }}>
           {SOLUTIONS.slice(0, 3).map((s, i) => (
             <div key={i} className="solution-card anim-fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
               <div className="icon-badge" style={{ background: s.color, marginBottom: 20 }}>{s.icon}</div>
@@ -38,7 +44,7 @@ export function HomePage({ setPage }) {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
         <div style={{ textAlign: "center", marginTop: 40 }}>
           <button className="btn-primary" onClick={() => { setPage("solutions"); window.scrollTo({ top: 0 }); }}>
             View All Solutions
@@ -86,5 +92,5 @@ export function HomePage({ setPage }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

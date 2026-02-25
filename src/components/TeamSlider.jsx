@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { SLIDES } from "./SLIDES";
+import radiantLogo from "../assets/radinatpath.png";
 export function HeroSlider({ setPage }) {
   const [cur, setCur] = useState(0);
   const [typed, setTyped] = useState("");
@@ -60,47 +61,49 @@ export function HeroSlider({ setPage }) {
 
       {/* Hero Content */}
       <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", zIndex: 10 }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", width: "100%" }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 3vw", width: "100%" }}>
           <div className="anim-fade-up">
             <div style={{
               display: "inline-flex", alignItems: "center", gap: 8,
               background: "rgba(59,130,246,0.12)", border: "1px solid rgba(59,130,246,0.3)",
-              borderRadius: 100, padding: "6px 18px", marginBottom: 28,
+              borderRadius: 100, padding: "8px 28px", marginBottom: 36,
               color: "#93c5fd", fontFamily: "'Outfit',sans-serif",
-              fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase",
+              fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase",
+              boxShadow: "0 2px 16px #60a5fa33"
             }}>
-              <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#60a5fa", display: "inline-block", boxShadow: "0 0 0 3px rgba(96,165,250,0.25)", animation: "pulse-ring 2s linear infinite" }} />
+              <span style={{ width: 9, height: 9, borderRadius: "50%", background: "#60a5fa", display: "inline-block", boxShadow: "0 0 0 4px rgba(96,165,250,0.25)", animation: "pulse-ring 2s linear infinite" }} />
               Nagpur's Trusted Tech Partner
             </div>
           </div>
 
-          <h1 className="anim-fade-up delay-1" style={{ fontSize: "clamp(2.4rem,6vw,4.5rem)", fontFamily: "'Outfit',sans-serif", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 24 }}>
+          <h1 className="anim-fade-up delay-1" style={{ fontSize: "clamp(2.8rem,7vw,5.2rem)", fontFamily: "'Outfit',sans-serif", fontWeight: 900, color: "#fff", lineHeight: 1.08, marginBottom: 32, letterSpacing: "-0.02em", textShadow: "0 2px 24px #60a5fa33" }}>
             Customized<br />
-            <span className="gradient-text" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-              <img src="/radiantpath.svg" alt="RadiantPath Icon" style={{ height: 36, verticalAlign: 'middle' }} />
+            <span className="gradient-text" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, fontSize: 'clamp(1.5rem,3vw,2.5rem)', fontWeight: 900, background: 'linear-gradient(90deg,#60a5fa,#6366f1,#1d6af5)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', textShadow: '0 2px 24px #60a5fa33' }}>
+              <img src={radiantLogo} style={{ height: 60, verticalAlign: 'middle', filter: 'drop-shadow(0 2px 12px #60a5fa88)' }} />
               Software & Hardware
             </span><br />
             Solutions
           </h1>
 
-          <p className="anim-fade-up delay-2" style={{ color: "rgba(255,255,255,0.7)", fontSize: "1.1rem", marginBottom: 8, maxWidth: 560 }}>
+          <p className="anim-fade-up delay-2" style={{ color: "rgba(255,255,255,0.78)", fontSize: "1.18rem", marginBottom: 12, maxWidth: 680, fontWeight: 600, letterSpacing: '0.01em', textShadow: '0 1px 8px #60a5fa33' }}>
             We Build{" "}
-            <span style={{ color: "#60a5fa", fontWeight: 600 }}>
+            <span style={{ color: "#60a5fa", fontWeight: 700 }}>
               {typed}<span style={{ animation: "blink 1s step-end infinite", borderRight: "2px solid #60a5fa" }}>&nbsp;</span>
             </span>
           </p>
-          <p className="anim-fade-up delay-2" style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.95rem", marginBottom: 40, maxWidth: 560 }}>
+          <p className="anim-fade-up delay-2" style={{ color: "rgba(255,255,255,0.55)", fontSize: "1.05rem", marginBottom: 48, maxWidth: 680 }}>
             RadiantPath & Shee Nithya Enterprises — your end-to-end technology partner for smarter, faster, better business.
           </p>
 
-          <div className="anim-fade-up delay-3" style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
-            <button className="btn-primary" onClick={() => setPage("solutions")}>
+          <div className="anim-fade-up delay-3" style={{ display: "flex", flexWrap: "wrap", gap: 18 }}>
+            <button className="btn-primary" style={{ fontSize: '1.08rem', padding: '14px 32px', fontWeight: 700 }} onClick={() => setPage("solutions")}>
               Explore Solutions
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </button>
-            <button className="btn-ghost" onClick={() => setPage("contact")}>Contact Us</button>
+            <button className="btn-ghost" style={{ fontSize: '1.08rem', padding: '14px 32px', fontWeight: 700 }} onClick={() => setPage("contact")}>Contact Us</button>
             <button
               className="btn-green"
+              style={{ fontSize: '1.08rem', padding: '14px 32px', fontWeight: 700 }}
               onClick={() => window.open("https://wa.me/919822226482?text=" + encodeURIComponent("Hello RadiantPath! I'm interested in your solutions. Please share more details."), "_blank")}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.143.564 4.148 1.55 5.887L.057 23.55l5.817-1.485A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.649-.49-5.186-1.346l-.371-.217-3.449.881.9-3.357-.232-.381A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>

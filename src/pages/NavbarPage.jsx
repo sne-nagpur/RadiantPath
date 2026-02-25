@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import radiantLogo from "../assets/radinatpath.png";
 export function NavBar({ page, setPage }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const links = ["Home", "About", "Solutions", "Features", "Contact"];
+  
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
@@ -33,14 +35,9 @@ export function NavBar({ page, setPage }) {
           {/* Logo */}
           <div onClick={() => go("Home")} style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }}>
             <div style={{
-              width: 42, height: 42, borderRadius: 12,
-              background: "linear-gradient(135deg,#1d6af5,#6366f1)",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              boxShadow: "0 4px 16px rgba(29,106,245,0.4)",
+            
             }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
+              <img src={radiantLogo} style={{ height: 70, width: 80 }} />
             </div>
             <div>
               <div style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 800, color: "#fff", fontSize: "1.25rem", lineHeight: 1, letterSpacing: "0.01em" }}>RadiantPath</div>
