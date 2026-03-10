@@ -98,6 +98,7 @@ export function AboutPage({ setPage }) {
             { name: "Paywell", icon: "💳", color: "#0891b2" },
             { name: "Hikvision", icon: "📷", color: "#ef4444" },
             { name: "Mantra", icon: "🖐️", color: "#16a34a" },
+            { name: "Greythr", icon: "📊", color: "#db2777" },
           ].map((b, i) => (
             <div key={b.name} style={{
               background: "linear-gradient(135deg,#f8fafc,#e0e7ef 80%)",
