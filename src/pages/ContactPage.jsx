@@ -54,7 +54,7 @@ export function ContactPage() {
                 <div>
                   <div style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 700, color: "#0f172a", marginBottom: 4 }}>Our Address</div>
                   <div style={{ color: "#64748b", fontSize: "0.9rem", lineHeight: 1.6 }}>
-                    Plot No 64, 65 & 66, Laxmi Vihar Complex, Tenement,<br />
+                    Plot No 63, 64 & 65, Laxmi Vihar Complex, Tenement,<br />
                     Beside Airport Centerpoint Hotel,<br />
                     Nagpur, Maharashtra 440025
                   </div>
